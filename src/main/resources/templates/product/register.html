@@ -8,7 +8,7 @@
 <body>
     <h1>Product Register Page</h1>
 
-    <form class="actionForm" action="/product/regiter" method="post">
+    <form class="actionForm" action="/product/register" method="post">
         <div>
             <input type="text" name="pname" value="상품1">
         </div>
@@ -16,7 +16,7 @@
             <input type="number" name="price" value="12000">
         </div>
         <div>
-            <button class="saveBtn">Regiter</button>
+            <button class="saveBtn">Register</button>
         </div>
     </form>
 
@@ -87,6 +87,8 @@
 
             actionForm.innerHTML += str
 
+            actionForm.submit()
+
 
 
         },false)
@@ -153,8 +155,6 @@
 
             console.log(liObj)
 
-            
-
             axios.delete(`http://localhost:8080/removeFile/${uuid}_${fileName}`)
 
             // 목록 삭제
@@ -162,13 +162,13 @@
 
         }
 
-     window.onbeforeunload = function () {
+    //  window.onbeforeunload = function () {
         
-        console.log("aaaaaaaa")
+    //     console.log("aaaaaaaa")
 
-        alert("어딜가?")
-        return '어딜가?';
-     }
+    //     alert("어딜가?")
+    //     return '어딜가?';
+    //  }
 
 
 
