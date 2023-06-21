@@ -50,8 +50,6 @@ public class ProductMapperTests {
 
     List<String> fileNames = dto.getFileNames();
 
-
-
     int count = productMapper.insertProduct(dto);
 
     log.info("insert product count: " + count);
